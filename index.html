@@ -166,6 +166,16 @@
         .email-link { color: inherit; text-decoration: none; transition: opacity 0.2s; }
         .email-link:hover { opacity: 0.7; text-decoration: underline; }
 
+        /* Contact Cards */
+        .contact-grid { display: flex; flex-direction: column; gap: 0.8rem; }
+        .contact-card-mini { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 1rem; display: flex; align-items: center; gap: 1rem; transition: all 0.3s; }
+        .contact-card-mini:hover { background: rgba(255, 255, 255, 0.08); transform: translateX(5px); border-color: rgba(255,255,255,0.2); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .contact-avatar { width: 45px; height: 45px; border-radius: 12px; background: linear-gradient(135deg, #fbcfe8, #a855f7); color: #011d17; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(168, 85, 247, 0.3); }
+        .contact-avatar-img { width: 45px; height: 45px; border-radius: 12px; object-fit: cover; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .contact-info { display: flex; flex-direction: column; gap: 0.2rem; }
+        .contact-name { font-weight: 700; font-size: 0.95rem; }
+        .contact-email { font-size: 0.85rem; opacity: 0.9; }
+
         /* Task Modal Styles */
         .task-input-container { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
         .task-input-container input { flex: 1; padding: 0.8rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.2); color: white; outline: none; font-family: var(--font-main); transition: border-color 0.3s;}
@@ -363,9 +373,13 @@
                     
                     <div class="contact-group">
                         <h4>Dosen Wali</h4>
-                        <div class="detail-row">
-                            <span class="detail-label">👨‍🏫 Ardiman Firmanda, S.S.T., M.Tr.Kom.</span>
-                            <span class="detail-value"><a href="mailto:ardiman@polibatam.ac.id" class="email-link">ardiman@polibatam.ac.id</a></span>
+                        <div class="contact-card-mini">
+                            <img src="https://if.polibatam.ac.id/assets/backupold/img/dosen/ardiman.jpg" class="contact-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="contact-avatar" style="display:none;">AF</div>
+                            <div class="contact-info">
+                                <span class="contact-name">Ardiman Firmanda, S.S.T., M.Tr.Kom.</span>
+                                <a href="mailto:ardiman@polibatam.ac.id" class="email-link contact-email">✉️ ardiman@polibatam.ac.id</a>
+                            </div>
                         </div>
                     </div>
 
@@ -462,14 +476,14 @@
     <script>
         // Lecturers Database
         const lecturers = {
-            'AR': { name: 'Ardiman Firmanda, S.S.T., M.Tr.Kom.', contact: 'ardiman@polibatam.ac.id' },
-            'SW': { name: 'Suwarno, S.S., M.Pd.', contact: 'suwarno@polibatam.ac.id' },
-            'AD': { name: 'Agung Riyadi, S.Si., M.Kom.', contact: 'agung@polibatam.ac.id' },
-            'M':  { name: "Amirul Mu'minin, S.Ds., M.Ds.", contact: 'amirul@polibatam.ac.id' },
-            'SY': { name: 'Noper Ardi, S.Pd., M.Eng.', contact: 'noperardi@polibatam.ac.id' },
-            'MH': { name: "Amirul Mu'minin, S.Ds., M.Ds.", contact: 'amirul@polibatam.ac.id' },
-            'BR': { name: 'Berliansyah Rumodhon, S.Pd., M.Sn.', contact: 'berliansyah@polibatam.ac.id' },
-            'NH': { name: 'Nursaima Harahap, M.Hum.', contact: 'nursaima@polibatam.ac.id' }
+            'AR': { name: 'Ardiman Firmanda, S.S.T., M.Tr.Kom.', contact: 'ardiman@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/assets/backupold/img/dosen/ardiman.jpg' },
+            'SW': { name: 'Suwarno, S.S., M.Pd.', contact: 'suwarno@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/assets/backupold/img/dosen/suwarno.jpg' },
+            'AD': { name: 'Agung Riyadi, S.Si., M.Kom.', contact: 'agung@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/assets/backupold/img/dosen/agung.jpg' },
+            'M':  { name: "Amirul Mu'minin, S.Ds., M.Ds.", contact: 'amirul@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/assets/backupold/img/dosen/amirul.jpg' },
+            'SY': { name: 'Noper Ardi, S.Pd., M.Eng.', contact: 'noperardi@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/assets/backupold/img/dosen/noper.jpg' },
+            'MH': { name: "Amirul Mu'minin, S.Ds., M.Ds.", contact: 'amirul@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/assets/backupold/img/dosen/amirul.jpg' },
+            'BR': { name: 'Berliansyah Rumodhon, S.Pd., M.Sn.', contact: 'berliansyah@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/assets/backupold/img/dosen/berliansyah.jpg' },
+            'NH': { name: 'Nursaima Harahap, M.Hum.', contact: 'nursaima@polibatam.ac.id', photo: '' }
         };
 
         // Schedule Data
@@ -685,12 +699,20 @@
                 Object.values(lecturers).forEach(lec => uniqueLecturersMap.set(lec.name, lec));
                 const uniqueLecturers = Array.from(uniqueLecturersMap.values());
                 
-                contactListContainer.innerHTML = uniqueLecturers.map(lec => `
-                    <div class="detail-row">
-                        <span class="detail-label">👨‍🏫 ${lec.name}</span>
-                        <span class="detail-value"><a href="mailto:${lec.contact}" class="email-link">${lec.contact}</a></span>
+                contactListContainer.innerHTML = '<div class="contact-grid">' + uniqueLecturers.map(lec => {
+                    const initials = lec.name.split(' ').slice(0,2).map(n => n[0]).join('').replace(/[^a-zA-Z]/g, '').toUpperCase();
+                    const photoHtml = lec.photo ? `<img src="${lec.photo}" class="contact-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` : '';
+                    
+                    return `
+                    <div class="contact-card-mini">
+                        ${photoHtml}
+                        <div class="contact-avatar" style="${lec.photo ? 'display:none;' : ''}">${initials}</div>
+                        <div class="contact-info">
+                            <span class="contact-name">${lec.name}</span>
+                            <a href="mailto:${lec.contact}" class="email-link contact-email">✉️ ${lec.contact}</a>
+                        </div>
                     </div>
-                `).join('');
+                `}).join('') + '</div>';
                 isContactListPopulated = true;
             }
             contactModal.classList.add('active');
