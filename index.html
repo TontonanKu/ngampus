@@ -200,7 +200,7 @@
 
         /* Detailed View Styles */
         .detail-overlay {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 50%; /* Center in the right half */
             width: 50%; /* Take up the entire right half */
@@ -273,14 +273,27 @@
             line-height: 1.4;
         }
 
-        @media (max-width: 1200px) {
-            .hero-content { flex-direction: column; padding-top: 5rem; overflow-y: auto;}
-            .hero-left, .hero-right { max-width: 100%; width: 100%; align-items: center; text-align: center; padding: 2rem 0;}
-            .main-product-3d { width: 100vw; height: 50vh; top: 40%; position: absolute;}
-            .carousel-cards { justify-content: center; }
-            .side-title { align-self: center; text-align: center; }
-            .schedule-detail { justify-content: center; }
-            .detail-overlay { left: 0; width: 100%; padding: 0 1rem; }
+        @media (max-width: 768px) {
+            .header { padding: 1rem; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+            .nav.glass { order: 3; width: 100%; justify-content: center; border-radius: 12px; }
+            .logo { font-size: 1.1rem; gap: 0.5rem; }
+            .logo img { height: 24px; }
+            .contact-btn { padding: 0.6rem 1rem; font-size: 0.8rem; }
+            
+            .hero { flex-direction: column; overflow-y: auto; overflow-x: hidden; height: 100vh; padding-top: 150px; justify-content: flex-start; display: flex; }
+            .hero-left { max-width: 100%; padding: 0 1rem; margin-bottom: 2rem; z-index: 10; display: flex; flex-direction: column; align-items: center; text-align: center; }
+            .hero-right { width: 100%; padding: 0 1rem 4rem 1rem; border-left: none; z-index: 10; display: flex; flex-direction: column; align-items: center; }
+            
+            .side-title { align-self: center; text-align: center; margin-bottom: 1rem; }
+            .carousel { justify-content: center; flex-wrap: wrap; }
+            
+            .hero-center { position: fixed; top: 15%; left: 0 !important; width: 100vw; height: 60vh; z-index: 0; opacity: 0.15; pointer-events: none; }
+            
+            .detail-overlay { left: 0; width: 100%; padding: 0 1rem; justify-content: center; align-items: flex-start; padding-top: 120px; }
+            .detail-card { width: 100%; padding: 1.5rem; max-height: 80vh; right: 0; margin: auto; }
+            .modal-card { width: 95%; padding: 1.5rem; }
+            
+            .contact-card-mini { flex-direction: column; text-align: center; padding: 1rem; }
         }
     </style>
 </head>
