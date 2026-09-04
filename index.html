@@ -35,15 +35,18 @@
         }
 
         .donate-btn {
-            background: linear-gradient(135deg, #ef4444, #f43f5e) !important;
+            background: rgba(239, 68, 68, 0.15) !important;
+            border: 1px solid rgba(239, 68, 68, 0.4) !important;
             color: white !important;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
+            backdrop-filter: blur(10px);
         }
         .donate-btn:hover {
-            background: linear-gradient(135deg, #f43f5e, #fb7185) !important;
-            box-shadow: 0 0 15px rgba(244, 63, 94, 0.5);
+            background: rgba(239, 68, 68, 0.3) !important;
+            border-color: rgba(239, 68, 68, 0.8) !important;
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
             transform: translateY(-2px);
         }
 
@@ -328,7 +331,7 @@
             <a href="#" class="nav-item" onclick="openContactModal(); return false;">Kontak Dosen</a>
         </nav>
         <div style="display: flex; gap: 0.5rem;">
-            <a href="https://trakteer.id/zura-w" target="_blank" class="contact-btn donate-btn">☕ Donate</a>
+            <a href="https://trakteer.id/zura-w/tip" target="_blank" class="contact-btn donate-btn">☕ Donate</a>
             <button class="contact-btn" onclick="openAdminModal()">Semester 3</button>
         </div>
     </header>
