@@ -34,6 +34,19 @@
             transition: background 1.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
+        .donate-btn {
+            background: linear-gradient(135deg, #ef4444, #f43f5e) !important;
+            color: white !important;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        .donate-btn:hover {
+            background: linear-gradient(135deg, #f43f5e, #fb7185) !important;
+            box-shadow: 0 0 15px rgba(244, 63, 94, 0.5);
+            transform: translateY(-2px);
+        }
+
         /* Themes for days (Game Technology Vibe) */
         body.theme-senin { --bg-inner: #1e1b4b; --bg-mid: #312e81; --bg-outer: #020617; } /* Neon Indigo */
         body.theme-selasa { --bg-inner: #064e3b; --bg-mid: #022c22; --bg-outer: #000000; } /* Matrix Green */
@@ -314,7 +327,10 @@
             <a href="#" class="nav-item" onclick="openTaskModal(); return false;">Tugas</a>
             <a href="#" class="nav-item" onclick="openContactModal(); return false;">Kontak Dosen</a>
         </nav>
-        <button class="contact-btn" onclick="openAdminModal()">Semester 3</button>
+        <div style="display: flex; gap: 0.5rem;">
+            <a href="https://trakteer.id/tontonanku" target="_blank" class="contact-btn donate-btn">☕ Donate</a>
+            <button class="contact-btn" onclick="openAdminModal()">Semester 3</button>
+        </div>
     </header>
 
     <main class="hero">
