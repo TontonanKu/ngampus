@@ -519,44 +519,46 @@
             'SY': { name: 'Noper Ardi, S.Pd., M.Eng.', contact: 'noperardi@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/E9hrDEfkDeUAJwH2WbO9XrX8f8f5G974MESvuPpq.jpg' },
             'MH': { name: "Amirul Mu'minin, S.Ds., M.Ds.", contact: 'amirul@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/vZXoxK8G0IeZ6KRADUdwhmQoVeUOSCLlfXUzagCI.jpg' },
             'BR': { name: 'Berliansyah Rumodhon, S.Pd., M.Sn.', contact: 'berliansyah@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/q4pidjdGlNZhi8h6SiJxVrhjIyl1Cb2uJh44C7OE.jpg' },
-            'NH': { name: 'Nursaima Harahap, M.Hum.', contact: 'nursaima@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/JgQG412BAUOhjCmRtjjGcbQSDPeNSHnUluy3BRtk.jpg' }
+            'NH': { name: 'Nursaima Harahap, M.Hum.', contact: 'nursaima@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/JgQG412BAUOhjCmRtjjGcbQSDPeNSHnUluy3BRtk.jpg' },
+            'AA': { name: 'Dosen Pengampu', contact: '-', photo: '' }
         };
 
         // Schedule Data
         const schedules = {
             senin: {
-                theme: 'theme-senin', model: './models/controller.glb', icon: '\uD83C\uDFAE',
+                theme: 'theme-senin', model: './models/controller.glb', icon: '🎮',
                 classes: [
-                    { time: '18:50 - 22:10', course: 'TP301-Proyek Gim 2D', room: 'GU 601', lec: 'AR', type: 'Offline' }
+                    { time: '18:00 - 21:20', course: 'TP301-Proyek Gim', room: 'GU 601', lec: 'AR', type: 'Offline' },
+                    { time: '21:20 - 23:00', course: 'TP305-Fisika', room: 'Online', lec: 'AD', type: 'Online' }
                 ]
             },
             selasa: {
-                theme: 'theme-selasa', model: './models/laptop.glb', icon: '\uD83D\uDCBB',
+                theme: 'theme-selasa', model: './models/laptop.glb', icon: '💻',
                 classes: [
                     { time: '18:00 - 19:40', course: 'TP303-Manajemen Proyek', room: 'Online', lec: 'SW', type: 'Online' },
-                    { time: '19:40 - 21:20', course: 'TP306-Fisika', room: 'Online', lec: 'AD', type: 'Online' },
-                    { time: '22:10 - 23:00', course: 'TP302-Aset Gim 2D', room: 'Online', lec: 'M', type: 'Online' }
+                    { time: '21:20 - 22:10', course: 'TP304-Pemrograman Berorientasi Objek', room: 'Online', lec: 'SY', type: 'Online' },
+                    { time: '22:10 - 23:00', course: 'TP302-Aset Gim 2D', room: 'Online', lec: 'AA', type: 'Online' }
                 ]
             },
             rabu: {
-                theme: 'theme-rabu', model: './models/handphone.glb', icon: '\uD83D\uDCF1',
+                theme: 'theme-rabu', model: './models/handphone.glb', icon: '📱',
                 classes: [
-                    { time: '18:00 - 18:50', course: 'TP304-Pemrograman Berorientasi Objek', room: 'Online', lec: 'SY', type: 'Online' },
+                    { time: '17:10 - 20:30', course: 'PBL TP Semester 3', room: 'GU 604', lec: 'AR', type: 'Offline' },
                     { time: '20:30 - 23:00', course: 'TP302-Aset Gim 2D (Praktikum)', room: 'GU 601', lec: 'MH', type: 'Offline' }
                 ]
             },
             kamis: {
-                theme: 'theme-kamis', model: './models/keyboard.glb', icon: '\u2328\uFE0F',
+                theme: 'theme-kamis', model: './models/keyboard.glb', icon: '⌨️',
                 classes: [
-                    { time: '18:00 - 20:30', course: 'TP304-PBO (Praktikum)', room: 'GU 601', lec: 'SY', type: 'Offline' },
-                    { time: '22:10 - 23:00', course: 'TP305-Desain Suara Gim', room: 'Online', lec: 'BR', type: 'Online' }
+                    { time: '18:00 - 20:30', course: 'TP304-Pemrograman Berorientasi Objek (Praktikum)', room: 'GU 601', lec: 'SY', type: 'Offline' },
+                    { time: '22:10 - 23:00', course: 'TP306-Desain Suara Gim', room: 'Online', lec: 'BR', type: 'Online' }
                 ]
             },
             jumat: {
-                theme: 'theme-jumat', model: './models/mouse.glb', icon: '\uD83D\uDDB1\uFE0F',
+                theme: 'theme-jumat', model: './models/mouse.glb', icon: '🖱️',
                 classes: [
                     { time: '18:00 - 19:40', course: 'PK003TP-Bahasa Inggris Umum', room: 'Online', lec: 'NH', type: 'Online' },
-                    { time: '20:30 - 23:00', course: 'TP305-Desain Suara Gim (Praktikum)', room: 'TF 4.2', lec: 'BR', type: 'Offline' }
+                    { time: '20:30 - 23:00', course: 'TP306-Desain Suara Gim (Praktikum)', room: 'TF 4.2', lec: 'BR', type: 'Offline' }
                 ]
             }
         };
