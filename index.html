@@ -326,10 +326,10 @@
             .carousel-cards { 
                 display: flex; 
                 flex-wrap: nowrap !important; 
-                justify-content: center; 
+                justify-content: flex-start; 
                 width: 100%; 
                 gap: 1rem; 
-                padding: 0;
+                padding: 0 1rem;
                 overflow-x: auto;
                 -webkit-overflow-scrolling: touch; 
                 scrollbar-width: none; 
@@ -342,6 +342,7 @@
                 gap: 0.2rem;
                 border-radius: 12px;
             }
+            .card:last-child { margin-right: 1rem; }
             .card-model { width: 35px; height: 35px; }
             .card-info { font-size: 0.6rem; }
             
@@ -880,6 +881,23 @@
         const adminModal = document.getElementById('admin-modal');
         
         let tasks = JSON.parse(localStorage.getItem('polibatam_tasks')) || [];
+        
+        // Inject default TP304 assignments if they haven't been added yet
+        const defaultTasks = [
+            { id: 'pbo_teori_1', text: "<strong>TP304 - PBO (Teori)</strong><br>Slide 18: Buat algoritma (kalimat deskriptif & flowchart) untuk karakter game naik level apabila EXP >= 100.", done: false, image: "" },
+            { id: 'pbo_prak_1', text: "<strong>TP304 - PBO (Praktikum)</strong><br>Latihan Mandiri (5 Soal): Ganjil/Genap, Kelulusan, Level Up, Segitiga Bintang, Item Terbatas. Buat kalimat deskriptif & flowchart.", done: false, image: "" }
+        ];
+        
+        let tasksUpdated = false;
+        defaultTasks.forEach(dt => {
+            if (!tasks.some(t => t.id === dt.id)) {
+                tasks.push(dt);
+                tasksUpdated = true;
+            }
+        });
+        if (tasksUpdated) {
+            localStorage.setItem('polibatam_tasks', JSON.stringify(tasks));
+        }
 
         function saveTasks() {
             localStorage.setItem('polibatam_tasks', JSON.stringify(tasks));
