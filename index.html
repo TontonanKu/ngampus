@@ -307,34 +307,29 @@
             html { overflow-y: auto !important; overflow-x: hidden !important; height: auto !important; min-height: 100vh !important; }
             body { overflow: visible !important; height: auto !important; min-height: 100vh !important; }
             .hero { overflow: visible !important; height: auto !important; min-height: 100vh; display: block !important; }
-            .hero-content { flex-direction: column; overflow: visible !important; height: auto !important; min-height: 100vh; padding-top: 140px; justify-content: flex-start; display: flex; align-items: center; width: 100%; padding-bottom: 100px; }
+            .hero-content { flex-direction: column; overflow: visible !important; height: auto !important; min-height: 100vh; padding-top: 110px; justify-content: flex-start; display: flex; align-items: center; width: 100%; padding-bottom: 100px; }
             .hero-left { 
                 max-width: 100%; width: 100%; padding: 0; margin-bottom: 2rem; z-index: 10; 
-                display: grid; 
-                grid-template-columns: auto 1fr; 
-                align-items: center; 
-                height: auto; 
-                gap: 1rem 0;
+                display: flex; flex-direction: column; align-items: flex-start; text-align: left; height: auto;
             }
             #day-title { 
                 margin-left: 1rem; margin-bottom: 0; 
-                font-size: 2.8rem; 
-                grid-column: 1;
+                font-size: 4rem; 
+                margin-top: -0.5rem;
             }
             .hero-right { 
-                width: 100%; padding: 0 0 0 1rem; border-left: none; z-index: 10; 
-                display: flex; align-items: center; height: auto; margin: 0; 
-                grid-column: 2;
+                width: 100%; padding: 0 1rem; border-left: none; z-index: 10; 
+                display: flex; align-items: center; justify-content: center; height: auto; margin-top: 1.5rem; 
                 overflow: hidden;
             }
             .product-carousel { width: 100%; align-items: center; }
             .carousel-cards { 
                 display: flex; 
                 flex-wrap: nowrap !important; 
-                justify-content: flex-start; 
+                justify-content: center; 
                 width: 100%; 
-                gap: 0.5rem; 
-                padding: 0 1rem 0 0;
+                gap: 1rem; 
+                padding: 0;
                 overflow-x: auto;
                 -webkit-overflow-scrolling: touch; 
                 scrollbar-width: none; 
@@ -351,7 +346,6 @@
             .card-info { font-size: 0.6rem; }
             
             .hero-center { 
-                grid-column: 1 / 3;
                 display: flex !important; 
                 position: relative !important; 
                 top: auto !important; 
@@ -362,7 +356,7 @@
                 background: none !important;
                 opacity: 1 !important;
                 pointer-events: auto !important;
-                margin: 0 0 0 -1rem !important;
+                margin: 0 !important;
             }
             .main-product-3d { 
                 width: 100vw !important; 
@@ -374,7 +368,6 @@
             }
 
             #schedule-list { 
-                grid-column: 1 / 3;
                 display: flex; 
                 flex-wrap: nowrap; 
                 overflow-x: auto; 
@@ -398,12 +391,11 @@
             .schedule-detail { font-size: 0.75rem; flex-wrap: wrap; gap: 0.5rem; }
 
             .award-badge { 
-                grid-column: 1 / 3;
                 position: relative !important; 
                 bottom: auto !important; 
                 left: auto !important; 
                 transform: none !important; 
-                margin-top: 1rem; 
+                margin-top: 2rem; 
                 align-self: center;
             }
 
@@ -701,10 +693,17 @@
                 const dTitle = document.getElementById('day-title');
                 const hCenter = document.querySelector('.hero-center');
                 const hRight = document.querySelector('.hero-right');
+                const schedList = document.getElementById('schedule-list');
                 
-                if (hLeft && dTitle) {
-                    if (hRight) hLeft.insertBefore(hRight, dTitle.nextSibling);
-                    if (hCenter && hRight) hLeft.insertBefore(hCenter, hRight.nextSibling);
+                if (hLeft) {
+                    // 1. Move 3D model right below day title
+                    if (dTitle && hCenter) {
+                        hLeft.insertBefore(hCenter, dTitle.nextSibling);
+                    }
+                    // 2. Move carousel right below schedule list
+                    if (schedList && hRight) {
+                        hLeft.insertBefore(hRight, schedList.nextSibling);
+                    }
                 }
             }
 
