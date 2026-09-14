@@ -321,6 +321,18 @@
                 width: 100%; padding: 0; border-left: none; z-index: 10; 
                 display: flex; align-items: center; justify-content: center; height: auto; margin-top: 0.5rem; 
                 overflow: visible;
+                position: relative;
+            }
+            .hero-right::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 40px;
+                background: linear-gradient(to right, transparent, rgba(16, 20, 30, 0.9));
+                pointer-events: none;
+                z-index: 5;
             }
             .product-carousel { width: 100%; align-items: center; }
             .carousel-cards { 
@@ -412,3 +424,21 @@
         }
 
 
+
+
+@media (max-width: 420px) {
+    .nav.glass { 
+        justify-content: flex-start; 
+        overflow-x: auto; 
+        padding: 0.3rem; 
+        scrollbar-width: none;
+    }
+    .nav.glass::-webkit-scrollbar { display: none; }
+    .nav-item { 
+        padding: 0.4rem 0.8rem; 
+        font-size: 0.75rem; 
+        white-space: nowrap; 
+    }
+    .hero-center { height: 180px !important; }
+    .main-product-3d { height: 180px !important; }
+}
