@@ -380,7 +380,6 @@
                                 <p class="task-text">${t.text}</p>
                             </div>
                         </div>
-                        <button class="task-delete" onclick="deleteTask(${i})" title="Hapus Tugas">🗑️</button>
                     </div>
                     ${metaHtml}
                     ${t.image ? `<img src="${t.image}" class="task-image" onclick="window.open('${t.image}', '_blank')">` : ''}
@@ -400,10 +399,7 @@
             tasks[index].done = !tasks[index].done;
             saveTasks();
         };
-        window.deleteTask = function(index) {
-            tasks.splice(index, 1);
-            saveTasks();
-        };
+
 
         // Admin logic
         window.openAdminModal = function() {
@@ -580,5 +576,6 @@
         if (window.innerWidth > 1024) {
             setInterval(createBubble, 400);
         }
+
 
 
