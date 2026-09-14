@@ -4,11 +4,9 @@
             'SW': { name: 'Suwarno, S.S., M.Pd.', contact: 'suwarno@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/5fnfol76ZAp0aupmiel3hn7fMGb7Nvroj4eLQjqk.jpg' },
             'AD': { name: 'Agung Riyadi, S.Si., M.Kom.', contact: 'agung@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/Fznb2SNyJJw9K0mDudldIcKDixicBT1PBjXxesWc.jpg' },
             'M':  { name: "Amirul Mu'minin, S.Ds., M.Ds.", contact: 'amirul@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/vZXoxK8G0IeZ6KRADUdwhmQoVeUOSCLlfXUzagCI.jpg' },
-            'SY': { name: 'Noper Ardi, S.Pd., M.Eng.', contact: 'noperardi@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/E9hrDEfkDeUAJwH2WbO9XrX8f8f5G974MESvuPpq.jpg' },
-            'MH': { name: "Amirul Mu'minin, S.Ds., M.Ds.", contact: 'amirul@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/vZXoxK8G0IeZ6KRADUdwhmQoVeUOSCLlfXUzagCI.jpg' },
+            'MH': { name: "Miftahul Husna Ghawa, S.Tr.Kom.", contact: 'miftahul@polibatam.ac.id', photo: '' },
             'BR': { name: 'Berliansyah Rumodhon, S.Pd., M.Sn.', contact: 'berliansyah@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/q4pidjdGlNZhi8h6SiJxVrhjIyl1Cb2uJh44C7OE.jpg' },
-            'NH': { name: 'Nursaima Harahap, M.Hum.', contact: 'nursaima@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/JgQG412BAUOhjCmRtjjGcbQSDPeNSHnUluy3BRtk.jpg' },
-            'AA': { name: 'Andri Albertha Pratama, S.Tr.Kom., M.Sn.', contact: 'andri@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/default.jpg' }
+            'NH': { name: 'Nursaima Harahap, M.Hum.', contact: 'nursaima@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/JgQG412BAUOhjCmRtjjGcbQSDPeNSHnUluy3BRtk.jpg' }
         };
 
         // Schedule Data
@@ -24,8 +22,8 @@
                 theme: 'theme-selasa', model: './models/laptop.glb', icon: '💻',
                 classes: [
                     { time: '18:00 - 19:40', course: 'TP303-Manajemen Proyek', room: 'Online', lec: 'SW', type: 'Online' },
-                    { time: '21:20 - 22:10', course: 'TP304-Pemrograman Berorientasi Objek', room: 'Online', lec: 'SY', type: 'Online' },
-                    { time: '22:10 - 23:00', course: 'TP302-Aset Gim 2D', room: 'Online', lec: 'AA', type: 'Online' }
+                    { time: '21:20 - 22:10', course: 'TP304-Pemrograman Berorientasi Objek', room: 'Online', lec: '-', type: 'Online' },
+                    { time: '22:10 - 23:00', course: 'TP302-Aset Gim 2D', room: 'Online', lec: 'M', type: 'Online' }
                 ]
             },
             rabu: {
@@ -38,7 +36,7 @@
             kamis: {
                 theme: 'theme-kamis', model: './models/keyboard.glb', icon: '⌨️',
                 classes: [
-                    { time: '18:00 - 20:30', course: 'TP304-Pemrograman Berorientasi Objek (Praktikum)', room: 'GU 601', lec: 'SY', type: 'Offline' },
+                    { time: '18:00 - 20:30', course: 'TP304-Pemrograman Berorientasi Objek (Praktikum)', room: 'GU 601', lec: '-', type: 'Offline' },
                     { time: '22:10 - 23:00', course: 'TP306-Desain Suara Gim', room: 'Online', lec: 'BR', type: 'Online' }
                 ]
             },
