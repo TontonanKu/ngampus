@@ -308,51 +308,79 @@
             body { overflow: visible !important; height: auto !important; min-height: 100vh !important; }
             .hero { overflow: visible !important; height: auto !important; min-height: 100vh; display: block !important; }
             .hero-content { flex-direction: column; overflow: visible !important; height: auto !important; min-height: 100vh; padding-top: 140px; justify-content: flex-start; display: flex; align-items: center; width: 100%; padding-bottom: 100px; }
-            .hero-left { max-width: 100%; width: 100%; padding: 0; margin-bottom: 2rem; z-index: 10; display: flex; flex-direction: column; align-items: flex-start; text-align: left; height: auto; }
-            #day-title { margin-left: 1rem; margin-bottom: 0; font-size: 3.5rem; }
+            .hero-left { 
+                max-width: 100%; width: 100%; padding: 0; margin-bottom: 2rem; z-index: 10; 
+                display: grid; 
+                grid-template-columns: auto 1fr; 
+                align-items: center; 
+                height: auto; 
+                gap: 1rem 0;
+            }
+            #day-title { 
+                margin-left: 1rem; margin-bottom: 0; 
+                font-size: 2.8rem; 
+                grid-column: 1;
+            }
+            .hero-right { 
+                width: 100%; padding: 0 0 0 1rem; border-left: none; z-index: 10; 
+                display: flex; align-items: center; height: auto; margin: 0; 
+                grid-column: 2;
+                overflow: hidden;
+            }
+            .product-carousel { width: 100%; align-items: center; }
+            .carousel-cards { 
+                display: flex; 
+                flex-wrap: nowrap !important; 
+                justify-content: flex-start; 
+                width: 100%; 
+                gap: 0.5rem; 
+                padding: 0 1rem 0 0;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch; 
+                scrollbar-width: none; 
+            }
+            .carousel-cards::-webkit-scrollbar { display: none; }
+            .card { 
+                flex: 0 0 auto !important; 
+                width: 65px; 
+                padding: 0.4rem 0.2rem;
+                gap: 0.2rem;
+                border-radius: 12px;
+            }
+            .card-model { width: 35px; height: 35px; }
+            .card-info { font-size: 0.6rem; }
             
             .hero-center { 
+                grid-column: 1 / 3;
                 display: flex !important; 
                 position: relative !important; 
                 top: auto !important; 
                 left: auto !important; 
                 width: 100vw !important; 
-                height: 250px !important; 
+                height: 280px !important; 
                 z-index: 15 !important;
                 background: none !important;
                 opacity: 1 !important;
                 pointer-events: auto !important;
-                margin: 1rem 0 0 -1rem !important;
+                margin: 0 0 0 -1rem !important;
             }
             .main-product-3d { 
                 width: 100vw !important; 
-                height: 250px !important; 
+                height: 280px !important; 
                 position: relative !important; 
                 top: auto !important; 
                 left: auto !important; 
                 transform: none !important; 
             }
 
-            .hero-right { width: 100%; padding: 0 1rem; border-left: none; z-index: 10; display: flex; flex-direction: column; align-items: center; height: auto; margin-top: 0; margin-bottom: 2rem; }
-            .product-carousel { width: 100%; align-items: center; }
-            
-            .carousel-cards { 
-                display: flex; 
-                flex-wrap: wrap !important; 
-                justify-content: center; 
-                width: 100%; 
-                gap: 0.8rem; 
-                padding: 0;
-            }
-            .card { flex: 0 0 calc(33.333% - 0.8rem) !important; max-width: 90px; }
-
             #schedule-list { 
+                grid-column: 1 / 3;
                 display: flex; 
                 flex-wrap: nowrap; 
                 overflow-x: auto; 
                 width: 100vw; 
                 margin-left: -1rem;
-                margin-top: 1rem;
+                margin-top: 0;
                 padding: 0 1rem 1rem 1rem; 
                 gap: 1rem; 
                 -webkit-overflow-scrolling: touch; 
@@ -370,11 +398,12 @@
             .schedule-detail { font-size: 0.75rem; flex-wrap: wrap; gap: 0.5rem; }
 
             .award-badge { 
+                grid-column: 1 / 3;
                 position: relative !important; 
                 bottom: auto !important; 
                 left: auto !important; 
                 transform: none !important; 
-                margin-top: 2rem; 
+                margin-top: 1rem; 
                 align-self: center;
             }
 
@@ -671,13 +700,11 @@
                 const hLeft = document.querySelector('.hero-left');
                 const dTitle = document.getElementById('day-title');
                 const hCenter = document.querySelector('.hero-center');
-                const hContent = document.querySelector('.hero-content');
                 const hRight = document.querySelector('.hero-right');
-                if (hLeft && dTitle && hCenter) {
-                    hLeft.insertBefore(hCenter, dTitle.nextSibling);
-                }
-                if (hContent && hRight) {
-                    hContent.insertBefore(hRight, hContent.firstChild);
+                
+                if (hLeft && dTitle) {
+                    if (hRight) hLeft.insertBefore(hRight, dTitle.nextSibling);
+                    if (hCenter && hRight) hLeft.insertBefore(hCenter, hRight.nextSibling);
                 }
             }
 
