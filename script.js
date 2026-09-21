@@ -297,6 +297,39 @@
                 image: "",
                 openedAt: "2026-09-10T18:00:00",
                 dueAt: "2026-09-16T23:59:59"
+            },
+            {
+                id: 'bing_prak_2',
+                course: 'PK003TP - Bahasa Inggris Umum',
+                type: 'Praktikum',
+                title: "Students' Activities (Meeting II)",
+                text: "Select a piece of writing (10–20 pages) relevant to PBL project 2. Read using extensive reading technique. Write a report and send learning materials. Prepare for Q&A session.",
+                done: false,
+                image: "",
+                openedAt: "2026-09-23T12:00:00",
+                dueAt: "2026-09-30T23:59:59"
+            },
+            {
+                id: 'aset2d_prak_2',
+                course: 'TP302 - Aset Gim 2D',
+                type: 'Praktikum',
+                title: 'Tugas Praktikum 2',
+                text: "Rancang satu aset gim 2D orisinal (karakter atau ikon UI) dengan menerapkan kelima prinsip desain. Sertakan lembar justifikasi desain singkat yang menjelaskan pilihan komposisi, warna, bentuk, garis, dan tipografi.",
+                done: false,
+                image: "",
+                openedAt: "2026-09-21T00:00:00",
+                dueAt: "2026-09-28T23:59:59"
+            },
+            {
+                id: 'audio_tugas_1',
+                course: 'TP306 - Desain Suara Gim',
+                type: 'Tugas',
+                title: 'Mencari Video Animasi',
+                text: "Mencari video animasi durasi 15 detik dan jangan lupa membawa alat yang dibutuhkan untuk video animasi tersebut.",
+                done: false,
+                image: "",
+                openedAt: "2026-09-21T00:00:00",
+                dueAt: "2026-09-28T23:59:59"
             }
         ];
         
