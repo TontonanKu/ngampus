@@ -480,3 +480,9 @@
         height: 35px;
     }
 }
+/* HIDE BIG BUBBLES ON MOBILE */
+@media (max-width: 1024px) {
+    .water-bubble, .leaves-container, .berries-container, .berries-container-bg {
+        display: none !important;
+    }
+}

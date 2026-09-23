@@ -618,9 +618,7 @@
             setTimeout(() => bubble.remove(), duration * 1000);
         }
         
-        if (window.innerWidth > 1024) {
-            setInterval(createBubble, 400);
-        }
+        setInterval(createBubble, 400);
 
 
 
