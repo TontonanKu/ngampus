@@ -6,7 +6,8 @@
             'M':  { name: "Amirul Mu'minin, S.Ds., M.Ds.", contact: 'amirul@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/vZXoxK8G0IeZ6KRADUdwhmQoVeUOSCLlfXUzagCI.jpg' },
             'MH': { name: "Miftahul Husna Ghawa, S.Tr.Kom.", contact: 'miftahul@polibatam.ac.id', photo: '' },
             'BR': { name: 'Berliansyah Rumodhon, S.Pd., M.Sn.', contact: 'berliansyah@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/q4pidjdGlNZhi8h6SiJxVrhjIyl1Cb2uJh44C7OE.jpg' },
-            'NH': { name: 'Nursaima Harahap, M.Hum.', contact: 'nursaima@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/JgQG412BAUOhjCmRtjjGcbQSDPeNSHnUluy3BRtk.jpg' }
+            'NH': { name: 'Nursaima Harahap, M.Hum.', contact: 'nursaima@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/JgQG412BAUOhjCmRtjjGcbQSDPeNSHnUluy3BRtk.jpg' },
+            'SY': { name: 'Syaprilla Donata, A.Md.Kom.', contact: 'syaprilla@polibatam.ac.id', photo: '' }
         };
 
         // Schedule Data
@@ -22,7 +23,7 @@
                 theme: 'theme-selasa', model: './models/laptop.glb', icon: '💻',
                 classes: [
                     { time: '18:00 - 19:40', course: 'TP303-Manajemen Proyek', room: 'Online', lec: 'SW', type: 'Online' },
-                    { time: '21:20 - 22:10', course: 'TP304-Pemrograman Berorientasi Objek', room: 'Online', lec: '-', type: 'Online' },
+                    { time: '21:20 - 22:10', course: 'TP304-Pemrograman Berorientasi Objek', room: 'Online', lec: 'SY', type: 'Online' },
                     { time: '22:10 - 23:00', course: 'TP302-Aset Gim 2D', room: 'Online', lec: 'M', type: 'Online' }
                 ]
             },
@@ -36,7 +37,7 @@
             kamis: {
                 theme: 'theme-kamis', model: './models/keyboard.glb', icon: '⌨️',
                 classes: [
-                    { time: '18:00 - 20:30', course: 'TP304-Pemrograman Berorientasi Objek (Praktikum)', room: 'GU 601', lec: '-', type: 'Offline' },
+                    { time: '18:00 - 20:30', course: 'TP304-Pemrograman Berorientasi Objek (Praktikum)', room: 'GU 601', lec: 'SY', type: 'Offline' },
                     { time: '22:10 - 23:00', course: 'TP306-Desain Suara Gim', room: 'Online', lec: 'BR', type: 'Online' }
                 ]
             },
@@ -329,8 +330,18 @@
                 done: false,
                 image: "",
                 openedAt: "2026-09-21T00:00:00",
-                dueAt: "2026-09-28T23:59:59"
-            }
+                dueAt: "2026-09-28T23:59:59",
+        {
+            id: 'pbo_teori_2',
+            course: 'TP304 - PBO',
+            type: 'Teori',
+            title: 'Tugas Teori: Class, Property, Method',
+            text: "Bayangkan Anda sedang mengembangkan game sederhana. Di dalam game terdapat Player, Enemy, Weapon, dan Item. Tentukan mana yang dapat dijadikan class, property yang dimiliki, dan method yang dapat dilakukan. (minimal 3 class).<br><br>Contoh:<br>Player<br>+- Properties: name, health, score, speed<br>+- Methods: Move(), Jump(), Attack()",
+            done: false,
+            image: "",
+            openedAt: "2026-09-22T00:00:00",
+            dueAt: "2026-09-29T00:00:00"
+        }
         ];
         
         let tasksUpdated = false;
@@ -609,6 +620,8 @@
         if (window.innerWidth > 1024) {
             setInterval(createBubble, 400);
         }
+
+
 
 
 
