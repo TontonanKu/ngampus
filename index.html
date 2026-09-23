@@ -104,9 +104,11 @@
             <!-- Contact Modal Overlay -->
             <div class="modal-overlay" id="contact-modal" onclick="if(event.target === this) closeContactModal()">
                 <div class="modal-card">
-                    <button class="close-btn" onclick="closeContactModal()">×</button>
-                    <h3>Kontak Dosen</h3>
-                    
+                    <div class="modal-header">
+                        <h3>Kontak Dosen</h3>
+                        <button class="close-btn" onclick="closeContactModal()">A-</button>
+                    </div>
+                    <div class="modal-body">
                     <div class="contact-group">
                         <h4>Dosen Wali</h4>
                         <div class="contact-card-mini">
@@ -125,26 +127,25 @@
                             <!-- Injected via JS -->
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Task Modal Overlay -->
+                </div></div></div><!-- Task Modal Overlay -->
             <div class="modal-overlay" id="task-modal" onclick="if(event.target === this) closeTaskModal()">
                 <div class="modal-card">
-                    <button class="close-btn" onclick="closeTaskModal()">×</button>
-                    <h3>Daftar Tugas</h3>
+                    <div class="modal-header">
+                        <h3>Daftar Tugas</h3>
+                        <button class="close-btn" onclick="closeTaskModal()">A-</button>
+                    </div>
+                    <div class="modal-body">
                     <ul class="task-list" id="task-list">
                         <!-- Injected via JS -->
                     </ul>
-                </div>
-            </div>
-
-            <!-- Admin Modal Overlay -->
+                </div></div></div><!-- Admin Modal Overlay -->
             <div class="modal-overlay" id="admin-modal" onclick="if(event.target === this) closeAdminModal()">
                 <div class="modal-card">
-                    <button class="close-btn" onclick="closeAdminModal()">×</button>
-                    <h3>Admin Panel (Upload Tugas)</h3>
-                    
+                    <div class="modal-header">
+                        <h3>Admin Panel (Upload Tugas)</h3>
+                        <button class="close-btn" onclick="closeAdminModal()">A-</button>
+                    </div>
+                    <div class="modal-body">
                     <div id="login-section">
                         <p style="margin-bottom: 1rem; color: #fbcfe8;">Masukkan Password Admin:</p>
                         <div class="task-input-container">
@@ -163,10 +164,7 @@
                         
                         <button class="add-task-btn" style="width: 100%; padding: 1rem;" onclick="adminSaveTask()">Upload & Simpan Tugas</button>
                     </div>
-                </div>
-            </div>
-
-            <div class="berries-container">
+                </div></div></div><div class="berries-container">
                 <div class="berry water-bubble b1"></div>
                 <div class="berry water-bubble b2"></div>
                 <div class="berry water-bubble b3"></div>
@@ -213,6 +211,8 @@
 <script src="script.js?v=4.4"></script>
 </body>
 </html>
+
+
 
 
 

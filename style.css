@@ -160,11 +160,9 @@
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 24px;
-            padding: 2.5rem;
-            width: 90%;
+            padding: 0 !important; display: flex; flex-direction: column; overflow: hidden; width: 90%;
             max-width: 550px;
             max-height: 85dvh;
-            overflow-y: auto;
             backdrop-filter: blur(25px);
             -webkit-backdrop-filter: blur(25px);
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255,255,255,0.1);
@@ -174,7 +172,7 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         .modal-overlay.active .modal-card { transform: translateY(0) scale(1); }
-        .modal-card h3 { font-size: 1.8rem; margin-bottom: 1rem; font-weight: 700; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 1rem; font-family: var(--font-heading); letter-spacing: 1px; }
+        .modal-card h3 { font-size: 1.8rem; font-weight: 700; font-family: var(--font-heading); letter-spacing: 1px; margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
         .contact-group h4 { font-size: 0.9rem; color: #fbcfe8; margin: 1.5rem 0 0.5rem 0; text-transform: uppercase; letter-spacing: 1px; }
         .email-link { color: inherit; text-decoration: none; transition: opacity 0.2s; }
         .email-link:hover { opacity: 0.7; text-decoration: underline; }
@@ -217,9 +215,9 @@
 
         
         /* Custom scrollbar for modal */
-        .modal-card::-webkit-scrollbar { width: 8px; }
-        .modal-card::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 10px; }
-        .modal-card::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+        .modal-body::-webkit-scrollbar { width: 8px; }
+        .modal-body::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 10px; }
+        .modal-body::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
 
         /* Detailed View Styles */
         .detail-overlay {
@@ -486,3 +484,20 @@
         display: none !important;
     }
 }
+
+.modal-header {
+    padding: 2.5rem 2.5rem 1rem 2.5rem;
+    flex-shrink: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.modal-body {
+    padding: 1rem 2.5rem 2.5rem 2.5rem;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+@media (max-width: 480px) {
+    .modal-header { padding: 1.5rem 1.5rem 1rem 1.5rem; }
+    .modal-body { padding: 1rem 1.5rem 1.5rem 1.5rem; }
+}
+
+
