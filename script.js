@@ -630,25 +630,27 @@
 
 
 
+        
+
         // Mobile Performance Optimization for model-viewer
         function optimize3DModelsForMobile() {
             if (window.innerWidth <= 1024) {
-                const models = document.querySelectorAll('model-viewer');
-                models.forEach(model => {
-                    // 2. Reduce/turn off shadow-intensity
-                    model.setAttribute('shadow-intensity', '0');
-                    
-                    // 3. Remove environment-image (HDR lighting)
-                    model.removeAttribute('environment-image');
-                    
-                    // 4. Disable auto-rotate to save CPU/GPU cycles
-                    if (model.hasAttribute('auto-rotate')) {
-                        model.removeAttribute('auto-rotate');
-                    }
-                    
-                    // 6. Set interaction-prompt="none"
-                    model.setAttribute('interaction-prompt', 'none');
+                const cardModels = document.querySelectorAll('.card-model');
+                // Use explicit Unicode escapes to guarantee safety against encoding corruption
+                const emojis = ['\uD83C\uDFAE', '\uD83D\uDCBB', '\uD83D\uDCF1', '\u2328\uFE0F', '\uD83D\uDDB1\uFE0F']; 
+                cardModels.forEach((model, index) => {
+                    const emojiDiv = document.createElement('div');
+                    emojiDiv.className = 'emoji-icon';
+                    emojiDiv.innerHTML = emojis[index];
+                    model.replaceWith(emojiDiv);
                 });
+
+                const mainModel = document.getElementById('product-model');
+                if (mainModel) {
+                    mainModel.setAttribute('shadow-intensity', '0');
+                    mainModel.removeAttribute('environment-image');
+                    mainModel.setAttribute('interaction-prompt', 'none');
+                }
             }
         }
         

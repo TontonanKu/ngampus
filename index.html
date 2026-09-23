@@ -15,7 +15,7 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <link rel="stylesheet" href="style.css?v=2.1">
+    <link rel="stylesheet" href="style.css?v=2.0">
 </head>
 <body class="theme-senin">
     <div id="bubbles-container"></div>
@@ -180,23 +180,23 @@
                 <div class="product-carousel">
                     <div class="carousel-cards">
                         <div class="card active" data-day="senin">
-                            <div class="card-model emoji-icon">??</div>
+                            <model-viewer class="card-model" loading="lazy" src="./models/controller.glb" auto-rotate rotation-per-second="30deg" interaction-prompt="none" disable-zoom camera-orbit="0deg 75deg 105%"></model-viewer>
                             <div class="card-info">Senin</div>
                         </div>
                         <div class="card" data-day="selasa">
-                            <div class="card-model emoji-icon">??</div>
+                            <model-viewer class="card-model" loading="lazy" src="./models/laptop.glb" auto-rotate rotation-per-second="30deg" interaction-prompt="none" disable-zoom camera-orbit="0deg 75deg 105%"></model-viewer>
                             <div class="card-info">Selasa</div>
                         </div>
                         <div class="card" data-day="rabu">
-                            <div class="card-model emoji-icon">??</div>
+                            <model-viewer class="card-model" loading="lazy" src="./models/handphone.glb" auto-rotate rotation-per-second="30deg" interaction-prompt="none" disable-zoom camera-orbit="0deg 75deg 105%"></model-viewer>
                             <div class="card-info">Rabu</div>
                         </div>
                         <div class="card" data-day="kamis">
-                            <div class="card-model emoji-icon">??</div>
+                            <model-viewer class="card-model" loading="lazy" src="./models/keyboard.glb" auto-rotate rotation-per-second="30deg" interaction-prompt="none" disable-zoom camera-orbit="0deg 75deg 105%"></model-viewer>
                             <div class="card-info">Kamis</div>
                         </div>
                         <div class="card" data-day="jumat">
-                            <div class="card-model emoji-icon">???</div>
+                            <model-viewer class="card-model" loading="lazy" src="./models/mouse.glb" auto-rotate rotation-per-second="30deg" interaction-prompt="none" disable-zoom camera-orbit="0deg 75deg 105%"></model-viewer>
                             <div class="card-info">Jum'at</div>
                         </div>
                     </div>
@@ -210,10 +210,9 @@
     </main>
 
     
-<script src="script.js?v=4.2"></script>
+<script src="script.js?v=4.3"></script>
 </body>
 </html>
-
 
 
 
