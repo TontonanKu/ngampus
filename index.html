@@ -102,7 +102,7 @@
             </div>
 
             <!-- Contact Modal Overlay -->
-            <div class="modal-overlay" id="contact-modal">
+            <div class="modal-overlay" id="contact-modal" onclick="if(event.target === this) closeContactModal()">
                 <div class="modal-card">
                     <button class="close-btn" onclick="closeContactModal()">×</button>
                     <h3>Kontak Dosen</h3>
@@ -129,7 +129,7 @@
             </div>
 
             <!-- Task Modal Overlay -->
-            <div class="modal-overlay" id="task-modal">
+            <div class="modal-overlay" id="task-modal" onclick="if(event.target === this) closeTaskModal()">
                 <div class="modal-card">
                     <button class="close-btn" onclick="closeTaskModal()">×</button>
                     <h3>Daftar Tugas</h3>
@@ -140,7 +140,7 @@
             </div>
 
             <!-- Admin Modal Overlay -->
-            <div class="modal-overlay" id="admin-modal">
+            <div class="modal-overlay" id="admin-modal" onclick="if(event.target === this) closeAdminModal()">
                 <div class="modal-card">
                     <button class="close-btn" onclick="closeAdminModal()">×</button>
                     <h3>Admin Panel (Upload Tugas)</h3>
@@ -213,6 +213,7 @@
 <script src="script.js?v=4.4"></script>
 </body>
 </html>
+
 
 
 
