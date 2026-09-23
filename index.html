@@ -32,7 +32,7 @@
         </nav>
         <div class="header-actions" style="display: flex; gap: 0.5rem;">
             <a href="https://trakteer.id/zura-w/tip" target="_blank" class="contact-btn donate-btn">☕ Donate</a>
-            <button class="contact-btn" onclick="openAdminModal()">Semester 3</button>
+            <button class="contact-btn" onclick="openProfileModal()">Semester 3</button>
         </div>
     </header>
 
@@ -138,33 +138,30 @@
                     <ul class="task-list" id="task-list">
                         <!-- Injected via JS -->
                     </ul>
-                </div></div></div><!-- Admin Modal Overlay -->
-            <div class="modal-overlay" id="admin-modal" onclick="if(event.target === this) closeAdminModal()">
+                </div></div></div><!-- Profile Modal Overlay -->
+            <div class="modal-overlay" id="profile-modal" onclick="if(event.target === this) closeProfileModal()">
                 <div class="modal-card">
                     <div class="modal-header">
-                        <h3>Admin Panel (Upload Tugas)</h3>
-                        <button class="close-btn" onclick="closeAdminModal()">&times;</button>
+                        <h3>My Profile</h3>
+                        <button class="close-btn" onclick="closeProfileModal()">&times;</button>
                     </div>
                     <div class="modal-body">
-                    <div id="login-section">
-                        <p style="margin-bottom: 1rem; color: #fbcfe8;">Masukkan Password Admin:</p>
-                        <div class="task-input-container">
-                            <input type="password" id="admin-pin" placeholder="Password..." onkeypress="if(event.key==='Enter') loginAdmin()">
-                            <button class="add-task-btn" onclick="loginAdmin()">Login</button>
+                        <div class="profile-wrapper">
+                            <img src="https://ui-avatars.com/api/?name=Zura&background=fbcfe8&color=011d17&size=150" class="profile-avatar" alt="Foto Profil">
+                            <h4 class="profile-name">Zura / Reihan</h4>
+                            <p class="profile-major">Game Technology 2026</p>
+                            <div class="profile-bio">
+                                Mahasiswa Politeknik Negeri Batam jurusan Teknik Informatika (Game Tech). Passionate di bidang pengembangan game dan UI/UX!
+                            </div>
+                            <div class="profile-socials">
+                                <a href="https://github.com/TontonanKu" target="_blank" class="social-link">GitHub</a>
+                                <a href="#" target="_blank" class="social-link">Instagram</a>
+                                <a href="#" target="_blank" class="social-link">LinkedIn</a>
+                            </div>
                         </div>
-                        <p id="login-error" style="color: #ef4444; display: none; font-size: 0.9rem;">Password Salah!</p>
                     </div>
-
-                    <div id="upload-section" style="display: none;">
-                        <p style="margin-bottom: 0.5rem; color: #fbcfe8;">Deskripsi Tugas:</p>
-                        <textarea id="admin-task-desc" placeholder="Tuliskan detail tugas... (Wajib)" rows="3" style="width: 100%; padding: 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.2); color: white; outline: none; font-family: var(--font-main); resize: none; margin-bottom: 1rem;"></textarea>
-                        
-                        <p style="margin-bottom: 0.5rem; color: #fbcfe8;">Screenshot Tugas (Opsional):</p>
-                        <input type="file" id="admin-task-img" accept="image/*" style="margin-bottom: 1.5rem; color: white; width: 100%; padding: 0.5rem; background: rgba(255,255,255,0.05); border-radius: 8px;">
-                        
-                        <button class="add-task-btn" style="width: 100%; padding: 1rem;" onclick="adminSaveTask()">Upload & Simpan Tugas</button>
-                    </div>
-                </div></div></div><div class="berries-container">
+                </div>
+            </div><div class="berries-container">
                 <div class="berry water-bubble b1"></div>
                 <div class="berry water-bubble b2"></div>
                 <div class="berry water-bubble b3"></div>
@@ -208,9 +205,11 @@
     </main>
 
     
-<script src="script.js?v=4.4"></script>
+<script src="script.js?v=4.5"></script>
 </body>
 </html>
+
+
 
 
 
