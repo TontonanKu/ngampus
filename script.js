@@ -629,3 +629,27 @@
 
 
 
+
+        // Mobile Performance Optimization for model-viewer
+        function optimize3DModelsForMobile() {
+            if (window.innerWidth <= 1024) {
+                const models = document.querySelectorAll('model-viewer');
+                models.forEach(model => {
+                    // 2. Reduce/turn off shadow-intensity
+                    model.setAttribute('shadow-intensity', '0');
+                    
+                    // 3. Remove environment-image (HDR lighting)
+                    model.removeAttribute('environment-image');
+                    
+                    // 4. Disable auto-rotate to save CPU/GPU cycles
+                    if (model.hasAttribute('auto-rotate')) {
+                        model.removeAttribute('auto-rotate');
+                    }
+                    
+                    // 6. Set interaction-prompt="none"
+                    model.setAttribute('interaction-prompt', 'none');
+                });
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', optimize3DModelsForMobile);
