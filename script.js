@@ -4,10 +4,10 @@
             'SW': { name: 'Suwarno, S.S., M.Pd.', contact: 'suwarno@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/5fnfol76ZAp0aupmiel3hn7fMGb7Nvroj4eLQjqk.jpg' },
             'AD': { name: 'Agung Riyadi, S.Si., M.Kom.', contact: 'agung@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/Fznb2SNyJJw9K0mDudldIcKDixicBT1PBjXxesWc.jpg' },
             'M':  { name: "Amirul Mu'minin, S.Ds., M.Ds.", contact: 'amirul@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/vZXoxK8G0IeZ6KRADUdwhmQoVeUOSCLlfXUzagCI.jpg' },
-            'MH': { name: "Miftahul Husna Ghawa, S.Tr.Kom.", contact: 'miftahul@polibatam.ac.id', photo: '' },
+            'MH': { name: "Miftahul Husna Ghawa, S.Tr.Kom.", contact: 'miftahul@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/assets/backupold/img/dosen/miftah_.jpg' },
             'BR': { name: 'Berliansyah Rumodhon, S.Pd., M.Sn.', contact: 'berliansyah@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/q4pidjdGlNZhi8h6SiJxVrhjIyl1Cb2uJh44C7OE.jpg' },
             'NH': { name: 'Nursaima Harahap, M.Hum.', contact: 'nursaima@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/storage/dosen/JgQG412BAUOhjCmRtjjGcbQSDPeNSHnUluy3BRtk.jpg' },
-            'SY': { name: 'Syaprilla Donata, A.Md.Kom.', contact: 'syaprilla@polibatam.ac.id', photo: '' }
+            'SY': { name: 'Syaprilla Donata, A.Md.Kom.', contact: 'syaprilla@polibatam.ac.id', photo: 'https://if.polibatam.ac.id/assets/backupold/img/dosen/syaprilla.png' }
         };
 
         // Schedule Data
@@ -621,6 +621,7 @@
         if (window.innerWidth > 1024) {
             setInterval(createBubble, 400);
         }
+
 
 
 
