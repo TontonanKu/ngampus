@@ -330,8 +330,9 @@
                 done: false,
                 image: "",
                 openedAt: "2026-09-21T00:00:00",
-                dueAt: "2026-09-28T23:59:59",
-        {
+                dueAt: "2026-09-28T23:59:59"
+            },
+            {
             id: 'pbo_teori_2',
             course: 'TP304 - PBO',
             type: 'Teori',
@@ -620,6 +621,8 @@
         if (window.innerWidth > 1024) {
             setInterval(createBubble, 400);
         }
+
+
 
 
 
