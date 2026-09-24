@@ -447,17 +447,8 @@
 
 
         // Admin logic
-        window.openAdminModal = function() {
-            document.getElementById('admin-pin').value = '';
-            document.getElementById('login-error').style.display = 'none';
-            document.getElementById('login-section').style.display = 'block';
-            document.getElementById('upload-section').style.display = 'none';
-            adminModal.classList.add('active');
-            setTimeout(() => document.getElementById('admin-pin').focus(), 100);
-        };
-        window.closeAdminModal = function() {
-            adminModal.classList.remove('active');
-        };
+        window.openProfileModal = function() { document.getElementById('profile-modal').classList.add('active'); };
+        window.closeProfileModal = function() { document.getElementById('profile-modal').classList.remove('active'); };
         window.loginAdmin = function() {
             if(document.getElementById('admin-pin').value === 'locked&011') {
                 document.getElementById('login-section').style.display = 'none';
@@ -653,4 +644,5 @@
         }
         
         document.addEventListener('DOMContentLoaded', optimize3DModelsForMobile);
+
 
